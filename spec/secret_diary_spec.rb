@@ -31,14 +31,20 @@ describe SecretDiary do
 				allow(diary).to receive(:be_read).and_return(false)
 				expect(diary.be_read).to eq false
 			end
+
+			it "refuses to be written" do
+				diary = double("diary")
+				allow(diary).to receive(:be_written).and_return(false)
+				expect(diary.be_written).to eq false
+			end
 		end
 	end
+
 end
 
  	
 
-
-
+   
 
 
 

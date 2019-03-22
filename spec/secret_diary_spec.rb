@@ -53,14 +53,16 @@ describe SecretDiary do
 				allow(diary).to receive(:read).and_return(true)
 				expect(diary.read).to eq true
 			end
+
+			it "gets written" do
+				diary = double("diary")
+				allow(diary).to receive(:written).and_return(true)
+				expect(diary.written).to eq true
+			end
 		end
 	end
-
-
 end
 
  	
 
    
-
-

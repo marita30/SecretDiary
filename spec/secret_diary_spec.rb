@@ -47,14 +47,20 @@ describe SecretDiary do
 				allow(diary).to receive(:unlocked).and_return(true)
 				expect(diary.unlocked).to eq true
 			end
+
+			it "gets read" do
+				diary = double("diary")
+				allow(diary).to receive(:read).and_return(true)
+				expect(diary.read).to eq true
+			end
 		end
 	end
+
+
 end
 
  	
 
    
-
-
 
 

@@ -17,16 +17,21 @@ require_relative '../lib/secret_diary'
 # as expected.
 ### WARNING ###
 
-RSpec.describe SecretDiary do
-  context "when locked" do
-    pending "refuses to be read"
+describe SecretDiary do
+	describe '#locked' do
+		context "when locked" do
+			it "locked diary" do
+				diary = double("diary")
+				allow(diary).to receive(:locked).and_return(true)
+				expect(diary.locked).to eq true
+			end
+		end
+	end
 
-    pending "refuses to be written"
-  end
 
-  context "when unlocked" do
-    pending "gets read"
-
-    pending "gets written"
-  end
 end
+
+ 	
+
+   
+

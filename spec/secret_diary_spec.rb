@@ -25,13 +25,20 @@ describe SecretDiary do
 				allow(diary).to receive(:locked).and_return(true)
 				expect(diary.locked).to eq true
 			end
+
+			it "refuses to be read" do
+				diary = double("diary")
+				allow(diary).to receive(:be_read).and_return(false)
+				expect(diary.be_read).to eq false
+			end
 		end
 	end
-
-
 end
 
  	
 
-   
+
+
+
+
 

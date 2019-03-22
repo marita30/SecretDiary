@@ -40,11 +40,21 @@ describe SecretDiary do
 		end
 	end
 
+	describe "#unlocked" do
+		context "when unlocked" do
+			it "unlocked diary" do
+				diary = double("diary")
+				allow(diary).to receive(:unlocked).and_return(true)
+				expect(diary.unlocked).to eq true
+			end
+		end
+	end
 end
 
  	
 
    
+
 
 
 
